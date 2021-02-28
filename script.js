@@ -15,17 +15,27 @@ typewriter
 
 $(function() {
    $('#terminal').terminal({
-      open: function(value) {
-         
+      help: function() {
+        this.echo('\n'); 
+        this.echo('\tDisplay projects'); 
+        this.echo('\n'); 
+        this.echo('Options:'); 
+        this.echo(''); 
+        this.echo('--list\tDisplay all projects:'); 
+        this.echo('--list\tDisplay all projects:'); 
       },
       sub: {
          get: function(arg) {
          }
       },
+      list: function(value) {
+		  this.echo(value);
+	  },
       close: function(arg1, arg2) {
       },
    },
    {
-	   greetings: ""
+	   prompt: '> ',
+	   greetings: false
    });
 });
