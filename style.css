@@ -1,0 +1,36 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+ }
+
+
+.container {
+	width: 100%;
+	height: 100vh;
+	animation: size 2s ease-out;
+	animation-fill-mode: forwards;
+} 
+
+.container:before {
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: white;
+    z-index: 1;
+    opacity: 0;
+    animation: opacity 2s ease-out;
+    animation-fill-mode: forwards;
+}
+
+#terminal {
+	width: 100%;
+	height: 100vh;
+	--size: 1.5;
+}
+
