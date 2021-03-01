@@ -21,21 +21,21 @@ $(function() {
         this.echo('\n'); 
         this.echo('Options:'); 
         this.echo(''); 
-        this.echo('--list\tDisplay all projects:'); 
-        this.echo('--list\tDisplay all projects:'); 
+        this.echo('ls\t\t\t\tList all projects:'); 
+        this.echo('whoami\t\t\tContact me'); 
       },
       sub: {
          get: function(arg) {
          }
       },
-      list: function(value) {
-		  this.echo(value);
+      ls: function() {
+		  this.echo('Listing all projects...\n');
 	  },
       close: function(arg1, arg2) {
       },
    },
    {
-	   prompt: '> ',
-	   greetings: false
+	   prompt: 'root@<xxx.xxx.xxx.xxx> ',
+	   greetings: false,
    });
 });
