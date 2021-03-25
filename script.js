@@ -1,16 +1,36 @@
-const app = document.getElementById("app");
-const typewriter = new Typewriter(app, {loop: true, delay: 125});
+/*
+ * Display into text to the user
+ */
+const playIntro = () => {
+	const app = document.getElementById("app");
+	let typewriter = new Typewriter(app, {cursor: ' '});
+
+	setTimeout(() => {
+		typewriter = new Typewriter(app, {loop: false, delay: 50});
+		typewriter
+			.typeString('...A12"£!A:$....adw!"£"!£...')
+			.pauseFor(1500)
+			.deleteAll()
+			.typeString('Restoring connection...')
+			.pauseFor(1000)
+			.deleteAll()
+			.typeString('Connection established.')
+			.deleteAll()
+			.typeString('hell st@"£ger... try ')
+			.typeString('<strong>help</strong>')
+			.typeString(' to see available comm....')
+			.pauseFor(5000)
+			.deleteAll()
+			.typeString('Connection lost...')
+			.start();
+
+	}, 1000);
+};
 
 
-typewriter
-	.typeString('Welcome stranger...')
-	.pauseFor(2000)
-	.deleteAll()
-	.typeString('type ')
-	.typeString('<strong>help</strong>')
-	.typeString(' for list of commands')
-	.pauseFor(3000)
-	.start()
+document.addEventListener('DOMContentLoaded', event => {
+	playIntro();
+});
 
 
 $(function() {
