@@ -37,7 +37,7 @@ $(function() {
    $('#terminal').terminal({
       help: function() {
         this.echo('\n'); 
-        this.echo('\tDisplay projects'); 
+        this.echo('\tWelcome to the DEV terminal'); 
         this.echo('\n'); 
         this.echo('Options:'); 
         this.echo(''); 
