@@ -16,7 +16,7 @@
 	height: 100vh;
 	--size: 1.5;
 	margin: 0 auto;
-	animation: open 0.5s ease forwards;
+	animation: open 1s ease forwards;
 	visibility: hidden;
 }
 
@@ -47,7 +47,7 @@
 
 #app {
 	font-size: 1.5rem;
-	padding: 10px 0;
+	padding: 5rem 0;
 	text-align: center;
 }
 
