@@ -53,7 +53,7 @@ $(function() {
             }
         },
         ls: function() {
-            this.echo('Listing all projects...\n');
+            showProjects(this);
         },
         whoami: function() {
             showMyInfo(this);
@@ -74,4 +74,14 @@ const showMyInfo = (term) => {
     term.echo("Find me on:");
     term.echo("tab.damian93@gmail.com");
     term.echo("https://github.com/dethspikee");
+};
+
+const showProjects = (term) => {
+    term.echo('Listing some projects.\n');
+    term.echo('*'.repeat(100));
+    term.echo('1bit bitmap converter');
+    term.echo('lets you easily transform your favourite images into OLED 128x64\nfriendly byte array straight from your local environement.')
+    term.echo('https://github.com/dethspikee/1bit-gui\n');
+    term.echo('*'.repeat(100));
+
 };
