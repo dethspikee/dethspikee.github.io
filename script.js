@@ -8,7 +8,7 @@ const playIntro = () => {
     setTimeout(() => {
         typewriter = new Typewriter(app, {loop: false, delay: 50});
         typewriter
-            .typeString('...A12"£!A:$....adw!"£"!£...')
+            .typeString('...367c3..636bb9c6...37e9b2e...')
             .pauseFor(1500)
             .deleteAll()
             .typeString('Restoring connection...')
@@ -19,7 +19,7 @@ const playIntro = () => {
             .deleteAll()
             .typeString('Unknown user detected...')
             .deleteAll()
-            .typeString('Welcome to dev-command')
+            .typeString('Welcome guest!')
             .start();
 
     }, 1000);
@@ -62,7 +62,7 @@ $(function() {
         },
     },
         {
-            prompt: '<unknown>@<xxx.xxx.xxx.xxx> ',
+            prompt: '[guest@xxx.xxx.xxx.xxx] ',
             greetings: false,
             keydown: function(command, term) {
                 if (command.keyCode == 17 || command.keyCode == 67) {
