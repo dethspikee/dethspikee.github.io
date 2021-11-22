@@ -61,15 +61,10 @@ $(function() {
         close: function(arg1, arg2) {
         },
     },
-        {
-            prompt: '[guest@xxx.xxx.xxx.xxx] ',
-            greetings: false,
-            keydown: function(command, term) {
-                if (command.keyCode == 17 || command.keyCode == 67) {
-                    clearInterval(intervalID);
-                }
-            },
-        });
+    {
+        prompt: 'guest@unknown ',
+        greetings: false,
+    });
 });
 
 const showMyInfo = (term) => {
