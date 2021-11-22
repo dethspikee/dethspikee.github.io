@@ -56,53 +56,22 @@ $(function() {
             this.echo('Listing all projects...\n');
         },
         whoami: function() {
-            intervalID = showMyInfo(this);
+            showMyInfo(this);
         },
         close: function(arg1, arg2) {
         },
     },
     {
-        prompt: 'guest@unknown ',
+        prompt: '[guest@unknown ~] ',
         greetings: false,
     });
 });
 
 const showMyInfo = (term) => {
-    let id = setInterval(() => {
-        term.clear();
-        term.echo("Always learning, Some might change over time. Try again...\n");
-        const django_length = Math.floor((Math.random() * 20) + 1);
-        const lang_length = Math.floor((Math.random() * 20) + 1);
-        const html_css_length = Math.floor((Math.random() * 10) + 1);
-        for (let i = 0; i < 10; i++) {
-            if (i == 2) {
-                term.echo("|-" + "-".repeat(django_length));
-                term.echo("| " + " ".repeat(django_length) + "|");
-                term.echo("| " + " ".repeat(django_length) + "|" + "DJANGO");
-                term.echo("| " + " ".repeat(django_length) + "|");
-                term.echo("|-" + "-".repeat(django_length));
-                continue;
-            }
-            if (i == 4) {
-                term.echo("|-" + "-".repeat(lang_length));
-                term.echo("| " + " ".repeat(lang_length) + "|");
-                term.echo("| " + " ".repeat(lang_length) + "|" + "PYTHON - JS - C");
-                term.echo("| " + " ".repeat(lang_length) + "|");
-                term.echo("|-" + "-".repeat(lang_length));
-                continue;
-            }
-
-            if (i == 6) {
-                term.echo("|-" + "-".repeat(html_css_length));
-                term.echo("| " + " ".repeat(html_css_length) + "|");
-                term.echo("| " + " ".repeat(html_css_length) + "|" + "HTLM - CSS");
-                term.echo("| " + " ".repeat(html_css_length) + "|");
-                term.echo("|-" + "-".repeat(html_css_length));
-                continue;
-            }
-            term.echo("|");
-        }
-        term.echo("0" + "-".repeat(30) + ">"); 
-    }, 3000);
-    return id;
+    term.echo("Junior Backend Developer\n");
+    term.echo("Solving problems and building stuff (mainly with Python and Django)");
+    term.echo("Interested in systems programming\n");
+    term.echo("Find me on:");
+    term.echo("tab.damian93@gmail.com");
+    term.echo("https://github.com/dethspikee");
 };
